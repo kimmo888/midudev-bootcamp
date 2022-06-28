@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import MensajeModulo from './MensajeModulo';
 
-function App() {
+const Mensaje = ()=>{
+  return <h2> Hola mundo desde una function </h2>;
+}
+const Description = ()=>{
+  return <p>Esta es una App del curso fullstack Bootcamp </p>;
+}
+
+function App() { //dentro de {} se puede evaluar una expresión en jsx
+  //las funciones por buenas practicas no devén tener mas funciones dentro de ellas.
+  const MensajeC = 'Hola mundo desde una variable';
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello World</h1>
+      <Mensaje />
+      <Description />
+      <MensajeModulo />
+      <p>{MensajeC}</p>
     </div>
   );
 }

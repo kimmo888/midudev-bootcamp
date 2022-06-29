@@ -1,5 +1,6 @@
 import './App.css';
-import MensajeModulo from './MensajeModulo';
+import MensajeModulo from './MensajeModulo'; //crear funciones o modulo en otras carpetas
+import MessagesProps from './MessagesProps';
 
 const Mensaje = ()=>{
   return <h2> Hola mundo desde una function </h2>;
@@ -9,7 +10,7 @@ const Description = ()=>{
 }
 
 function App() { //dentro de {} se puede evaluar una expresión en jsx
-  //las funciones por buenas practicas no devén tener mas funciones dentro de ellas.
+  //las funciones por buenas practicas NO devén tener mas funciones dentro de ellas.
   const MensajeC = 'Hola mundo desde una variable';
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() { //dentro de {} se puede evaluar una expresión en jsx
       <Mensaje />
       <Description />
       <MensajeModulo />
+      <MessagesProps color='red' messages=' con texto para que sea mas reutilizable' />
       <p>{MensajeC}</p>
     </div>
   );
